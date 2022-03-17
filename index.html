@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex/Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Syncopate&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        <div class="header c1">
+            
+            <div class="static">I Am:</div>
+            <ul class="dinamic">
+                <li><span>Alan Martins</span></li>
+                <li><span>Portfolio</span></li>
+            </ul>
+        </div>
+
+        <div class="aside c2">
+            <div class="author">
+                <img src="assets/images/MinhaImagem.jpeg">
+            </div>
+
+            <div class="information">
+                <div class="title">
+                    <h1>Web developer</h1>
+                    <p>Developer front-end</p>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><img src="assets/icons/homeIcon.png"><a id="homeBtn" onclick="toggle1()">home</a></li>
+                        <li><img src="assets/icons/aboutIcon.png"><a id="aboutBtn" onclick="toggle2()">about</a></li>
+                        <li><img src="assets/icons/workIcon.png"><a id="serviceBtn" onclick="toggle3()">Service</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+
+        <div class="main c3">
+             <div class="home">
+
+                <div>
+                     <img class="imgProject" src="assets/images/imagem1.png">
+                     <h2>Churrascômetro</h2>
+                     <a href="https://alanaguiar01.github.io/ChurrascometroAlanDev/">link do projeto</a>
+                 </div>
+
+                 <div>
+                    <img class="imgProject" src="assets/images/imagem2.png">
+                    <h2>Audio Player</h2>
+                    <a href="https://alanaguiar01.github.io/Player-de-Audio/">link do projeto</a>
+                </div>
+
+                <div>
+                    <img class="imgProject" src="assets/images/imagem3.png">
+                    <h2>Pagina de Captura</h2>
+                    <a href="http://127.0.0.1:5500/projetoPaginaDeCaptura/index.html">link do projeto</a>
+                </div>
+
+                <div>
+                    <img class="imgProject" src="assets/images/imagem4.png">
+                    <h2>Perguntas Anônimas</h2>
+                    <a href="https://github.com/alanaguiar01/rocket.q-">link do projeto</a>
+                </div>
+
+             </div>
+
+             <div class="about">
+                    
+                    <img class="picture" src="assets/images/MinhaImagem2.jpeg"> 
+                    
+                    <div class="description">
+                        <h3>Minha Historia</h3>
+                        <P>Meu nome é Alan tenho 24 anos e gosto de atuar na
+                            area de desenvolvedor web, quando tive contato com 
+                            desenvolvimento web eu estava cursando tecnologo de 
+                            analista e desenvolvedor de sistemas.
+                        </P>
+                        <p>Sou desenvolvedor front-end no momento, mas não vou 
+                            me limitar a isso e pretendo participar de projetos
+                            com mais complexidades envolvendo mais tecnologias. 
+                        </p>
+                    </div>
+
+             </div>
+
+             <div class="service">
+
+                <div class="initial">
+                    <img src="assets/images/front end.png">
+                    <h1>Dev Front-end</h1>
+                </div>
+
+                <div class="interface">
+                    <h1>Desenvolvimento de interface</h1>
+                    <h2>O que é?</h2>
+                    <p>Front-End é a camada do seu site no qual o usuário interage.
+                       É a interface navegável. A fachada. O layout após desenhado, 
+                       vem como imagem e consequentemente com todos os estilos, medidas 
+                       especificações especificações técnicas definidas.
+                    </p>
+                    <p>    
+                        O Desenvolvedor Front-End tem a responsabilidade de traduzir isso 
+                        em código, usando as mais avançadas tecnologias para que os requisitos
+                        sejam fielmente seguidos.
+                    </p>
+                </div>
+
+                <div class="technology">
+                    <h2>Tecnologias utilizadas:</h2>
+                    <ul>
+                        <li>HTML (Linguagem de Marcação de Hipertexto);</li>
+                        <li>CSS (Folhas de Estilo em Cascatas);</li>
+                        <li>JavaScript (linguagem de programação que funciona do lado cliente);</li>
+                        <li>Newsletter / Email Marketing.</li>
+                    </ul>
+                </div>
+             </div>
+
+        </div>
+
+        <div class="annoucement c1">
+            <h3>Minhas conexões de estudo:</h3>
+            <div class="connections">
+                <p>Discord: Rafaela Ballerini</p>
+                <a href="https://discord.gg/ballerini"><img src="assets/icons/discord.png"></a>
+                <hr>
+                <p>Discord: Codify Community</p>
+                <a href="https://discord.gg/6Ur6n6vA"><img src="assets/icons/discord.png"></a>
+                <hr>
+                <p>Discord: Programadores BR</p>
+                <a href="https://discord.gg/NunbZr8b"><img src="assets/icons/discord.png"></a>
+                <hr>
+                <p>Discord: Rocketseat</p>
+                <a href="https://discord.gg/VRfWZmPU"><img src="assets/icons/discord.png"></a>
+                <hr>
+                <p>Grupo Whatsapp: DevOp's Community</p>
+                <a href="https://chat.whatsapp.com/G67UxHttccCIBRs2FT0e0M"><img src="assets/icons/whatsapp.png"></a>
+            </div>
+        </div>
+
+        <div class="contact c2">
+            <div class="form-content" id="contactAlan">
+                <form action="https://gmail.us20.list-manage.com/subscribe/post?u=89fe1328515df01c743e1360c&amp;id=fd3cd53f47"
+                 method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <label for="name">Nome:</label>
+                  <input type="text" class="txtName" placeholder="Digite seu nome" name="NAME" ><br>
+  
+                  <label for="phone">Telefone:</label>
+                  <input type="tel" class="nPhone" placeholder="(xx)xxxx-xxxx" name="TELEFONE"><br>
+  
+                  <label for="email">Email:</label>
+                  <input type="email" class="txtEmail" placeholder="Digite seu email" name="EMAIL"><br>
+  
+                  <textarea placeholder="Comentario opcional sobre o contato" name="COMENT"></textarea><br>
+  
+                  <input type = "submit" class="send" onclick="Enviar()" value="Enviar">
+                   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_89fe1328515df01c743e1360c_fd3cd53f47" tabindex="-1" value=""></div>
+                </form>
+                
+              </div>
+
+        </div>
+
+        <div class="footer c3">
+
+            <div class="socialNetwork">
+                <p>Minhas redes sociais:</p>
+                <a href="https://www.linkedin.com/in/alan-martins-48a58a1a3/" target=”_blank”><img class="linkedin" src="assets/icons/linkedin.jpg"></a>
+                <a href="mailto:alanaguiar01@gmail.com" target="_blank"><img class="gmail" src="assets/icons/gmail.png"></a>
+                <a href="https://api.whatsapp.com/send?phone=19974073966&text=Mande%20uma%20mensagem%20para%20mim%20aqui." target=”_blank”><img class="whatsapp" src="assets/icons/whatsapp.png"></a>
+                <a href="https://github.com/alanaguiar01"><img src="assets/icons/github.png"></a>
+            </div>
+
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

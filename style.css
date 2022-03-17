@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Fontes */
+@font-face {
+    font-family: "fonte1";
+    src: url(assets/fonts/Movement.ttf);
+}
+body{
+    background-color: #14110F;
+}
+/* CSS GRID */
+.container{
+    display: grid;
+    padding: 5px;
+    grid-template-areas:"header header header header header header"
+                        "aside main main main main annoucement"
+                        "contact contact contact contact contact contact"
+                        "footer footer footer footer footer footer";
+    grid-gap: 5px;
+    grid-template-rows: repeat(auto);
+}
+
+.header{
+    grid-area: header;
+    background-color: #14110F;
+}
+.aside{
+    grid-area: aside;
+    background-color: #F3F3F4; 
+}
+.main{
+    grid-area: main;
+    background-color: #F3F3F4; 
+}
+.annoucement{
+    grid-area: annoucement;
+    background-color: #F3F3F4; 
+}
+.contact{
+    grid-area: contact;
+    background-color: #F3F3F4; 
+}
+.footer{
+    grid-area: footer;
+    background-color: #D9C5B2; 
+}
+
+
+/* CSS HEADER */
+.header{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .static{ 
+    color: white;
+    font-size: 30px;
+    font-weight: 1000;
+    font-family: 'Open Sans', sans-serif;
+}
+.header .dinamic{
+    margin-left: 20px;
+    line-height:40px;
+    height: 40px;
+    overflow: hidden;
+}
+.dinamic li{
+    color: #fc6d6d;
+    list-style: none;
+    font-size: 30px;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 1000;
+    left: 0;
+    position: relative;
+    top: 0;
+    animation: slide 4s steps(2) infinite;
+}
+
+@keyframes slide{
+    100%{
+        top: -80px;
+    }    
+}
+
+.dinamic li span{
+    position: relative;
+}
+
+.dinamic li span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 2s steps(10) infinite;
+    background: #14110F;
+}
+
+.dinamic li span{
+    position: relative;
+}
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -40px 0 40px;
+    }
+}
+
+
+/* CSS ASIDE */
+.aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.author{
+    margin: 25px 0;
+}
+.author img {
+    border-radius: 50%;
+    width: 200px;
+    box-shadow: 2px 2px 2px black;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+.title h1 {
+    font-family: "fonte1";
+}
+.title p {
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+
+}
+nav ul{
+    list-style:none;
+}
+nav ul li{
+    padding: 3px 2px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a{
+    font-family: 'Syncopate', sans-serif;
+    font-size: 30px;
+    
+}
+nav ul li a:hover{
+    text-decoration: underline #fc6d6d;
+    cursor: pointer;
+}
+/* CSS FLEXBOX */
+/* CSS HOME */
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.home > div {
+    flex: 1 1 200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 10px 10px black;
+}
+.imgProject{
+    max-width: 100%;
+    display: block;
+    
+}
+.home > div h2{
+    font-family: 'Open Sans', sans-serif;
+}
+.home > div a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CSS ABOUT */
+.about{
+    display: none;
+    justify-content: center;
+    margin: 5vh auto;
+    max-width: 800px;
+}
+.picture{ 
+    object-fit: cover;
+    width: 260px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+}
+.description{
+    display: inline-block;
+    text-align: left;
+    color: #14110F;
+    max-width: 40%;
+    margin-left: 40px;   
+}
+.description h3{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.description p{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+/* CSS SERVICE */
+.service{
+    display: none;
+    margin: 5vh auto;
+    max-width: 800px;
+    flex-direction: column;
+    align-items: center;
+}
+.initial img{
+    width: 100%;
+    box-shadow: 10px 10px 10px black;
+    margin-bottom: 10px;
+}
+.initial h1{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 40px; 
+    
+}
+.interface h1{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+} 
+.interface h2{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 5px;
+}
+.interface p{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+.technology h2{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+.technology ul{
+    font-family: 'Poppins', sans-serif;
+    list-style: decimal;
+    margin-bottom: 40px;
+}
+
+
+.annoucement h3{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 30px 0; 
+}
+.annoucement .connections{
+    display: flex;
+    flex-direction: column;
+    text-align: center;  
+}
+.connections a img{
+    width: 48px;
+}
+.connections p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-content{
+   display: flex;
+   justify-content: center;
+   height: 50vh;
+   margin-top: 1%; 
+}    
+form{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+form input {
+    height: 40px;
+    border-radius: 10px;
+}
+form textarea {
+    height: 200px;
+    border-radius: 10px;
+}
+.send{
+    background-color: #fc6d6d;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.send:hover{
+    box-shadow: 10px 10px 10px black;
+}
+
+
+.footer .socialNetwork{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+.footer a{
+    padding: 10px 20px;
+}
+.footer img{
+    width: 45px;
+    height: 40px;
+}
+
+@media screen and (max-width: 767px){
+    body{
+        width: 100%;
+    }
+    .container{
+        grid-template-areas:
+        "header"
+        "aside"
+        "main"
+        "annoucement"
+        "contact"
+        "footer";
+    }
+    .about{
+        flex-direction: column;  
+    }
+    .picture{ 
+        margin: 20px auto;
+    }
+    .description{
+        margin: 0 auto;
+        text-align: left;
+    }
+    .home, .about, .service{
+        max-width: 100%;
+    }
+}
